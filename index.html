@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="description" content="国际象棋网页应用：双人对弈、AI 对弈、棋局复盘、官方谜题库、加密谜题导入导出与个人训练进度。" />
+  <meta name="theme-color" content="#f4f8ff" />
+  <title>Chess · 国际象棋</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>♟</text></svg>" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header" aria-label="站点导航">
+    <div class="dynamic-island" id="dynamicIsland">
+      <div class="island-summary">
+        <div class="brand" data-action="home" role="button" tabindex="0" aria-label="返回首页">
+          <span class="brand-mark" aria-hidden="true">♔</span>
+          <div class="brand-copy">
+            <h1>Chess</h1>
+            <p>对弈 · 训练 · 谜题</p>
+          </div>
+        </div>
+        <div class="island-activity" aria-live="polite">
+          <span class="activity-dot" aria-hidden="true"></span>
+          <span id="islandViewLabel">首页概览</span>
+        </div>
+        <button class="island-toggle" data-action="toggle-island" type="button" aria-expanded="false" aria-controls="primaryNavigation" aria-label="展开或收起导航">
+          <span>导航</span>
+          <span class="toggle-glyph" aria-hidden="true"></span>
+        </button>
+      </div>
+      <nav class="top-nav" id="primaryNavigation" aria-label="主导航">
+        <button data-action="home">首页</button>
+        <button data-action="open-double">双人对弈</button>
+        <button data-action="open-ai">AI 对弈</button>
+        <button data-action="open-games">棋局库</button>
+        <button data-action="open-levels">官方题库</button>
+        <button data-action="open-create">创建谜题</button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="app" class="app-shell" aria-live="polite"></main>
+
+  <footer class="site-footer">
+    <span>平台程序版权所有 &copy; 2026 Lin.Zikang。保留所有权利。</span>
+    <span>谜题编创者版权所有，未经授权不得转载、改编或商用。</span>
+  </footer>
+
+  <div id="modal" class="modal hidden" role="dialog" aria-modal="true"></div>
+  <div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
+
+  <script src="site-config.js" defer></script>
+  <script src="app.js" defer></script>
+</body>
+</html>
